@@ -59,7 +59,8 @@ Plug 'pearofducks/ansible-vim'
 "TODO Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
 "TODO Plug 'zchee/deoplete-clang'
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-"TODO Plug 'SirVer/ultisnips'                                           " Snippet engine
+ "TODO
+ Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
@@ -77,7 +78,8 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}      " Easy ascii t
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags'                               " Autognerate Tags
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'                                          " Show Tagbar
+Plug 'lvht/tagbar-markdown'                                       " Tagbar support for markdown files
 
 " Vim text-objects
 Plug 'michaeljsmith/vim-indent-object'                            " Indention based Textobject (dai, cai...)
@@ -159,3 +161,10 @@ let g:switch_custom_definitions =
 			\   ['_', '#'],
 			\   ['LOW', 'HIGH']
 			\ ]
+
+" Disable some annoying grammar rules
+let g:grammarous#disabled_categories = {
+            \ '*' : ['TYPOGRAPHY', 'FALSCHE_VERWENDUNG_DES_BINDESTRICHS'],
+            \ 'help' : ['PUNCTUATION', 'TYPOGRAPHY'],
+            \ 'markdown' : ['PUNCTUATION', 'TYPOGRAPHY'],
+            \ }
