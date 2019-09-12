@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tclem/vim-arduino'
 " Plug 'vim-latex/vim-latex'
 " Plug 'lukaszkorecki/workflowish'
+Plug 'Stautob/vim-fish'                                         " Fish shell syntac
 
 " Latex
 Plug 'lervag/vimtex', {'for': 'tex'}
