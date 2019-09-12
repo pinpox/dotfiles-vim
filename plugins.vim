@@ -29,7 +29,7 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }            " Latex previe
 " Plug 'jeffkreeftmeijer/vim-dim'
 " Plug 'noahfrederick/vim-noctu'
 " Plug 'evgenyzinoviev/vim-vendetta'
-" Plug 'chriskempson/base16-vim'                                    " Base16 colorschemes
+Plug 'chriskempson/base16-vim'                                    " Base16 colorschemes
 " Plug 'mhartington/oceanic-next'
 " Plug 'kristijanhusak/vim-hybrid-material'
 " Plug 'liuchengxu/space-vim-theme'
