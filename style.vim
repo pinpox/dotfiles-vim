@@ -29,10 +29,20 @@ syntax on
 set background=dark " for the dark version
 " colorscheme one
 " colorscheme dracula
-colorscheme base16-material-darker
+" colorscheme base16-material-darker
+
+" with base16-shell tool
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Italic comments
+highlight Comment cterm=italic gui=italic
 
 " Airline
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 0            " Powerline Symbols in bar
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
+let g:airline_theme='tomorrow'
 " let g:airline_theme='one'
