@@ -72,12 +72,16 @@ Plug 'autozimu/LanguageClient-neovim', {
 " Plug 'thomasfaingnaert/vim-lsp-snippets'
 " Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 " Plug 'lighttiger2505/deoplete-vim-lsp'
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"
 Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
 Plug 'w0rp/ale'
+
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Git
 Plug 'airblade/vim-gitgutter'                                     " Shows a git diff in the gutter
@@ -181,3 +185,14 @@ let g:grammarous#disabled_rules = {
             \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES'],
             \ 'help' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
             \ }
+
+" set to 1, nvim will open the preview window after entering the markdown buffer
+" default: 0
+let g:mkdp_auto_start = 0
+
+
+" specify browser to open preview page
+" default: ''
+let g:mkdp_browser = 'chromium'
+
+let g:mkdp_echo_preview_url = 1
