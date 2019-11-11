@@ -177,9 +177,7 @@ let g:switch_custom_definitions =
 			\   ['LOW', 'HIGH']
 			\ ]
 
-" Disable some annoying grammar rules
-let g:grammarous#disabled_categories = {
-            \ '*' : ['TYPOGRAPHY', 'FALSCHE_VERWENDUNG_DES_BINDESTRICHS'],
-            \ 'help' : ['PUNCTUATION', 'TYPOGRAPHY'],
-            \ 'markdown' : ['PUNCTUATION', 'TYPOGRAPHY'],
+let g:grammarous#disabled_rules = {
+            \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES'],
+            \ 'help' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
             \ }
