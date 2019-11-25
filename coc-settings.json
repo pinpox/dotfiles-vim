@@ -1,13 +1,26 @@
 {
-	"languageserver": {
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-			"filetypes": ["go"]
-		}
-	},
-"suggest.snippetIndicator": " ► ",
-"suggest.triggerAfterInsertEnter": true,
-"suggest.minTriggerInputLength": 1,
-}
+"languageserver": {
 
+    "golang": {
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
+    },
+
+    "clangd": {
+      "command": "clangd",
+      "args": ["--background-index"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["c", "cpp", "objc", "objcpp"]
+    }
+
+  },
+    "suggest.snippetIndicator": " ► ",
+    "suggest.triggerAfterInsertEnter": true,
+	"suggest.noselect": false,
+    "suggest.minTriggerInputLength": 1
+}

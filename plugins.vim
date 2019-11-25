@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tclem/vim-arduino'
 " Plug 'vim-latex/vim-latex'
 " Plug 'lukaszkorecki/workflowish'
-Plug 'Stautob/vim-fish'                                         " Fish shell syntac
+" Plug 'Stautob/vim-fish'                                         " Fish shell syntac
 
 " Latex
 Plug 'lervag/vimtex', {'for': 'tex'}
@@ -50,35 +50,37 @@ Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}              " I3-config synt
 Plug 'hdima/python-syntax', {'for': 'python'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'jeroenbourgois/vim-actionscript', {'for': 'actionscript'} " Actionscript syntax
-Plug 'fatih/vim-go'
-Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
+" Plug 'fatih/vim-go'
+" Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
 Plug 'pearofducks/ansible-vim'
 
 " Completion and snippets
 " "TODO
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
-Plug 'zchee/deoplete-clang'
+" Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
+" Plug 'zchee/deoplete-clang'
 Plug 'prabirshrestha/async.vim'
 " " Plug 'prabirshrestha/vim-lsp'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+
+" Plug 'neovim/nvim-lsp' 
+
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
 
 
 " Plug 'thomasfaingnaert/vim-lsp-snippets'
 " Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 " Plug 'lighttiger2505/deoplete-vim-lsp'
 "
-Plug 'SirVer/ultisnips'                                           " Snippet engine
+" Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -134,26 +136,26 @@ let g:arduino_args = '--verbose-upload'
 let g:livedown_browser = "firefox"                                " the browser to use for preview
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-if !exists('g:deoplete#omni_patterns')
-	let g:deoplete#omni_patterns = {}
-endif
-let g:deoplete#omni_patterns.tex =
-			\ '\v\\%('
-			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
-			\ . '|hyperref\s*\[[^]]*'
-			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
-			\ . '|%(include%(only)?|input)\s*\{[^}]*'
-			\ . ')\m'
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+" let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+" call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+" if !exists('g:deoplete#omni_patterns')
+" 	let g:deoplete#omni_patterns = {}
+" endif
+" let g:deoplete#omni_patterns.tex =
+" 			\ '\v\\%('
+" 			\ . '\a*cite\a*%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+" 			\ . '|\a*ref%(\s*\{[^}]*|range\s*\{[^,}]*%(}\{)?)'
+" 			\ . '|hyperref\s*\[[^]]*'
+" 			\ . '|includegraphics\*?%(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+" 			\ . '|%(include%(only)?|input)\s*\{[^}]*'
+" 			\ . ')\m'
 
 " Taskwarrior
 let g:task_default_prompt = [ 'project',  'description', 'due']
