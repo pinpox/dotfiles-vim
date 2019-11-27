@@ -50,7 +50,7 @@ Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}              " I3-config synt
 Plug 'hdima/python-syntax', {'for': 'python'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'jeroenbourgois/vim-actionscript', {'for': 'actionscript'} " Actionscript syntax
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 " Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
