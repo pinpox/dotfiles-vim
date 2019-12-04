@@ -50,7 +50,7 @@ Plug 'hdima/python-syntax', {'for': 'python'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'jeroenbourgois/vim-actionscript', {'for': 'actionscript'} " Actionscript syntax
 Plug 'fatih/vim-go'
-" Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
+Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
 Plug 'pearofducks/ansible-vim'
@@ -106,7 +106,6 @@ Plug 'tpope/vim-surround'                                         " Surround tex
 " Whitespace
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'                             " Hightlight all trailing whitespace in red
-Plug 'vim-scripts/Align'                                          " Dependency for sqlformatter
 
 " Other helpers
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy find everything
@@ -197,3 +196,9 @@ let g:mkdp_auto_start = 0
 let g:mkdp_browser = 'chromium'
 
 let g:mkdp_echo_preview_url = 1
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
