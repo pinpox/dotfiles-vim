@@ -101,7 +101,8 @@ Plug 'lvht/tagbar-markdown'                                       " Tagbar suppo
 
 " Vim text-objects
 Plug 'michaeljsmith/vim-indent-object'                            " Indention based Textobject (dai, cai...)
-Plug 'tpope/vim-surround'                                         " Surround text-object
+" Plug 'tpope/vim-surround'                                         " Surround text-object
+Plug 'machakann/vim-sandwich'
 
 " Whitespace
 Plug 'junegunn/vim-easy-align'
