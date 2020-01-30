@@ -24,13 +24,51 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet copy "Copy files to remote locations" b
-- name: ${1}
-  copy:
-    src: ${2}
-    dest: /etc/foo.conf
-    owner: foo
-    group: foo
-    mode: '0644'
+snippet template "Template a file" b
+- name: "Template ${1} to ${2}"
+  template:
+    src: "${1}.j2"
+    dest: "${2}"
+    # mode: '0644'
 endsnippet
+
+snippet pacman "Install arch packages from repo" b
+- name: "Install necessary packages"
+  pacman:
+    name:
+      - "${1}"
+    state: latest
+endsnippet
+
+snippet copy "Copy a file" b
+- name: "Copy ${1} to ${2}"
+  copy:
+    src: "${1}"
+    dest: "${2}"
+    # mode: '0644'
+endsnippet
+
+snippet systemd "Start and enable systemd service" b
+- name: "Enable ${1} on startup"
+  systemd:
+    name: "${1}"
+    enabled: yes
+    masked: no
+
+- name: Start "${1}"
+  systemd:
+    state: started
+    name: "${1}"
+endsnippet
+
+snippet directory "Make sure directory exists" b
+- name: "Make sure ${1} exists"
+  file:
+    path: "${1}"
+    state: directory
+    # owner: root
+    # group: root
+    # mode: '0700'
+endsnippet
+
 
