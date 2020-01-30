@@ -22,5 +22,6 @@
     "suggest.snippetIndicator": " ► ",
     "suggest.triggerAfterInsertEnter": true,
 	"suggest.noselect": false,
-    "suggest.minTriggerInputLength": 1
+    "suggest.minTriggerInputLength": 1,
+	"snippets.userSnippetsDirectory": "~/.vim/coc_snippets"
 }
