@@ -17,11 +17,8 @@ syntax on
 
 set background=dark
 
-" set colorscheme with base16-shell tool
-if filereadable(expand("~/.vimrc_background"))
-	let base16colorspace=256
-	source ~/.vimrc_background
-endif
+" set ansible-generated colorscheme
+colorscheme ansible-theme
 
 " Italic comments
 highlight Comment cterm=italic gui=italic
