@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'binaryplease/vim-gopher-syntax'
 " Plug 'chrisbra/csv.vim'                                         " Csv filetype
 " Plug 'christoomey/vim-tmux-navigator'                             " Seamless Tmux navigation
 " Plug 'morhetz/gruvbox'
