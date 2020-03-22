@@ -39,7 +39,7 @@ Plug 'rakr/vim-one'
 " Other appeareance
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
-Plug 'lilydjwg/colorizer'                                       " Colorize color definitions
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }       " Colorize color definitions
 Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
 Plug 'timakro/vim-searchant'                                    " Better highlighting of search
 
