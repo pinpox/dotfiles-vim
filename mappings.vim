@@ -46,7 +46,7 @@ let mapleader="\<Space>"
 " open a file using fzf
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>t :Tags<CR>
+nnoremap <leader>t :Vista finder<CR>
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 
 "toggle line wrapping
