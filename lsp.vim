@@ -63,14 +63,26 @@
 "    "     \ 'whitelist': ['java'],
 "    "     \ })
 "" endif
+" Tab completion
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+" Force refresh completion
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+" To enable preview window:
+
+set completeopt+=preview
+" To auto close preview window when completion is done.
+
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Required for operations modifying multiple buffers like rename.
-set hidden
+" set hidden
 
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-    \ 'go': ['~/.go/bin/gopls'],
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'python': ['/usr/local/bin/pyls'],
+"     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+"     \ 'go': ['~/.go/bin/gopls'],
+"     \ }
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" nnoremap <F5> :call LanguageClient_contextMenu()<CR>

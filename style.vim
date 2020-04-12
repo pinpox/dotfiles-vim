@@ -29,3 +29,8 @@ highlight Comment cterm=italic gui=italic
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 0
 let g:airline_theme='base16'
+"
+"
+
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = 'ℓ'

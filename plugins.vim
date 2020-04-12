@@ -60,8 +60,6 @@ Plug 'pearofducks/ansible-vim'
 " "TODO
 " Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
 " Plug 'zchee/deoplete-clang'
-Plug 'prabirshrestha/async.vim'
-" " Plug 'prabirshrestha/vim-lsp'
 
 
 " Plug 'neovim/nvim-lsp' 
@@ -78,8 +76,16 @@ Plug 'prabirshrestha/async.vim'
 "
 " Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'                                         " Snippets
+
+
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
 " Plug 'w0rp/ale'
 
 
@@ -97,8 +103,11 @@ Plug 'dhruvasagar/vim-table-mode', {'on': 'TableModeToggle'}      " Easy ascii t
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags'                               " Autognerate Tags
-Plug 'majutsushi/tagbar'                                          " Show Tagbar
-Plug 'lvht/tagbar-markdown'                                       " Tagbar support for markdown files
+" Plug 'majutsushi/tagbar'                                          " Show Tagbar
+" Plug 'lvht/tagbar-markdown'                                       " Tagbar support for markdown files
+"
+" Tagbar replacement?
+Plug 'liuchengxu/vista.vim'
 
 " Vim text-objects
 Plug 'michaeljsmith/vim-indent-object'                            " Indention based Textobject (dai, cai...)
@@ -157,8 +166,6 @@ let g:livedown_browser = "firefox"                                " the browser 
 " 			\ . '|%(include%(only)?|input)\s*\{[^}]*'
 " 			\ . ')\m'
 
-" Taskwarrior
-let g:task_default_prompt = [ 'project',  'description', 'due']
 
 " Ale
 " let g:ale_linters ={
@@ -194,7 +201,6 @@ let g:mkdp_auto_start = 0
 
 
 " specify browser to open preview page
-" default: ''
 let g:mkdp_browser = 'chromium'
 
 let g:mkdp_echo_preview_url = 1
@@ -204,3 +210,7 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+
+
+
