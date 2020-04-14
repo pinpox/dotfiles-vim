@@ -49,6 +49,10 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Vista finder<CR>
 nnoremap <leader>v :tabedit $MYVIMRC<CR>
 
+" Terminal
+
+let g:floaterm_keymap_toggle = '<Leader>t'
+
 "toggle line wrapping
 nnoremap <leader>l :set wrap!<CR>
 nnoremap <leader>` :<CR>!<CR>

@@ -80,6 +80,9 @@ Plug 'pearofducks/ansible-vim'
 Plug 'honza/vim-snippets'                                         " Snippets
 
 
+
+Plug 'voldikss/vim-floaterm'
+
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -117,6 +120,8 @@ Plug 'machakann/vim-sandwich'
 " Whitespace
 Plug 'junegunn/vim-easy-align'
 Plug 'ntpeters/vim-better-whitespace'                             " Hightlight all trailing whitespace in red
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
 
 " Other helpers
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy find everything
