@@ -17,4 +17,4 @@ source ~/.vim/style.vim
 source ~/.vim/lsp.vim
 
 " COC:
-" source ~/.vim/coc_settings.vim
+source ~/.vim/coc_settings.vim
