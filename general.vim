@@ -33,6 +33,7 @@ set wrapscan                   " Wrap when searching to beginning
 set mouse=a
 set path+=**                   " Search down into subfolders, provides tab-completion for all file-related tasks
 syntax enable                  " enable syntax highlighting
+set conceallevel=0             " Don't ever hide stuff from me
 
 
 
@@ -48,3 +49,5 @@ if has("autocmd")
 				\   exe "normal! g`\"" |
 				\ endif
 endif
+
+

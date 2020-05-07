@@ -25,6 +25,9 @@ Plug 'binaryplease/vim-gopher-syntax'
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'dracula/vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }            " Latex preview Plug
+Plug 'nicwest/vim-camelsnek'
+
+Plug 'ryanoasis/vim-devicons'
 
 " Colorschemes
 " Plug 'jeffkreeftmeijer/vim-dim'

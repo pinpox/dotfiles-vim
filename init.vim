@@ -18,3 +18,10 @@ source ~/.vim/lsp.vim
 
 " COC:
 source ~/.vim/coc_settings.vim
+
+
+
+let &colorcolumn=join(range(101,999),",")
+
+
+
