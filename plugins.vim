@@ -20,6 +20,7 @@ Plug 'binaryplease/vim-gopher-syntax'
 " Plug 'vim-latex/vim-latex'
 " Plug 'lukaszkorecki/workflowish'
 " Plug 'Stautob/vim-fish'                                         " Fish shell syntac
+Plug 'liuchengxu/vim-which-key'
 
 " Latex
 Plug 'lervag/vimtex', {'for': 'tex'}
