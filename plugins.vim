@@ -8,6 +8,7 @@ Plug 'binaryplease/vim-gopher-syntax'
 " Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 " Plug 'vim-pandoc/vim-pandoc'
 " Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'rafalbromirski/vim-aurora'
 " Plug 'vim-pandoc/vim-rmarkdown'
 " Plug 'markonm/traces.vim'
 " Plug 'benekastah/neomake'                                         " Linter/maker
@@ -44,7 +45,7 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }       " Colorize color definitions
-Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
+" Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
 Plug 'timakro/vim-searchant'                                    " Better highlighting of search
 
 " Syntax and language specific

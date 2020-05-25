@@ -20,27 +20,61 @@ source ~/.vim/lsp.vim
 source ~/.vim/coc_settings.vim
 
 
-
-let &colorcolumn=join(range(101,999),",")
-
-
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-" TODO add something like this for coc
-" let g:which_key_map.l = {
-"       \ 'name' : '+lsp',
-"       \ 'f' : ['spacevim#lang#util#Format()'          , 'formatting']       ,
-"       \ 'r' : ['spacevim#lang#util#FindReferences()'  , 'references']       ,
-"       \ 'R' : ['spacevim#lang#util#Rename()'          , 'rename']           ,
-"       \ 's' : ['spacevim#lang#util#DocumentSymbol()'  , 'document-symbol']  ,
-"       \ 'S' : ['spacevim#lang#util#WorkspaceSymbol()' , 'workspace-symbol'] ,
-"       \ 'g' : {
-"         \ 'name': '+goto',
-"         \ 'd' : ['spacevim#lang#util#Definition()'     , 'definition']      ,
-"         \ 't' : ['spacevim#lang#util#TypeDefinition()' , 'type-definition'] ,
-"         \ 'i' : ['spacevim#lang#util#Implementation()' , 'implementation']  ,
-"         \ },
+			\| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+call which_key#register('<Space>', "g:which_key_map")
+
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+
+let g:which_key_map =  {}
+
+let g:which_key_map.g = {
+			\ 'name' : '+GOTO',
+			\ 'd' : ['<Plug>(coc-definition)'      , 'Definition'],
+			\ 'y' : ['<Plug>(coc-type-difinition)' , 'Type definiton'],
+			\ 'i' : ['<Plug>(coc-implementation)'  , 'Implementation'],
+			\ 'r' : ['<Plug>(coc-references)'      , 'References'],
+			\}
+
+let g:which_key_map.l = {
+			\ 'name' : '+LSP',
+			\ 'f' : [':call CocAction("format")' , 'Autoformat'],
+			\ 'R' : ['<Plug>(coc-references)'    , 'References'],
+			\ 'r' : ['<Plug>(coc-rename)'        , 'Rename'],
+			\ 'a' : ['<Plug>(coc-codeaction)'    , 'Code action'],
+			\ 'F' : ['<Plug>(coc-fix-current)'   , 'Fix automatically'],
+			\ 'c' : {
+				\ 'name': '+CocList',
+				\ 'd' : [':<C-u> CocList dignostics' , 'Diagnostics'],
+				\ 'e' : [':<C-u> CocList extensions' , 'Extensions'],
+				\ 'c' : [':<C-u> CocList commands'   , 'Commands'],
+				\ 'o' : [':<C-u> CocList outline'    , 'Outline'],
+				\ 's' : [':<C-u> CocList -I symbols' , 'Symbols'],
+				\ },
+			\ }
+
+" let g:which_key_map['w'] = {
+"       \ 'name' : '+windows' ,
+"       \ 'w' : ['<C-W>w'     , 'other-window']          ,
+"       \ 'd' : ['<C-W>c'     , 'delete-window']         ,
+"       \ '-' : ['<C-W>s'     , 'split-window-below']    ,
+"       \ '|' : ['<C-W>v'     , 'split-window-right']    ,
+"       \ '2' : ['<C-W>v'     , 'layout-double-columns'] ,
+"       \ 'h' : ['<C-W>h'     , 'window-left']           ,
+"       \ 'j' : ['<C-W>j'     , 'window-below']          ,
+"       \ 'l' : ['<C-W>l'     , 'window-right']          ,
+"       \ 'k' : ['<C-W>k'     , 'window-up']             ,
+"       \ 'H' : ['<C-W>5<'    , 'expand-window-left']    ,
+"       \ 'J' : ['resize +5'  , 'expand-window-below']   ,
+"       \ 'L' : ['<C-W>5>'    , 'expand-window-right']   ,
+"       \ 'K' : ['resize -5'  , 'expand-window-up']      ,
+"       \ '=' : ['<C-W>='     , 'balance-window']        ,
+"       \ 's' : ['<C-W>s'     , 'split-window-below']    ,
+"       \ 'v' : ['<C-W>v'     , 'split-window-below']    ,
+"       \ '?' : ['Windows'    , 'fzf-window']            ,
 "       \ }
+"
