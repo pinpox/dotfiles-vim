@@ -1,18 +1,20 @@
 {
-"languageserver": {
-
-
-    "clangd": {
-      "command": "clangd",
-      "args": ["--background-index"],
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
-    }
-
-  },
-    "suggest.snippetIndicator": " ► ",
-    "suggest.triggerAfterInsertEnter": true,
+	"languageserver": {
+		"clangd": {
+			"command": "clangd",
+			"args": ["--background-index"],
+			"rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+			"filetypes": ["c", "cpp", "objc", "objcpp"]
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+			"filetypes": ["go"]
+		}
+	},
+	"suggest.snippetIndicator": " ► ",
+	"suggest.triggerAfterInsertEnter": true,
 	"suggest.noselect": false,
-    "suggest.minTriggerInputLength": 1,
+	"suggest.minTriggerInputLength": 1,
 	"snippets.userSnippetsDirectory": "~/.vim/coc_snippets"
 }

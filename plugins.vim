@@ -55,11 +55,13 @@ Plug 'PotatoesMaster/i3-vim-syntax', {'for': 'i3'}              " I3-config synt
 Plug 'hdima/python-syntax', {'for': 'python'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'jeroenbourgois/vim-actionscript', {'for': 'actionscript'} " Actionscript syntax
-Plug 'fatih/vim-go'
 Plug 'buoto/gotests-vim'                         " Generate test for Go function in current line
 Plug 'justinmk/vim-syntax-extra'
 Plug 'stevearc/vim-arduino'
 Plug 'pearofducks/ansible-vim'
+Plug 'kana/vim-textobj-user' " Dependency for vim-textobj-between
+Plug 'thinca/vim-textobj-between'     "Text objects for a range between a character
+Plug 'fvictorio/vim-textobj-backticks' "Text object between backticks
 
 " Completion and snippets
 " "TODO
@@ -81,6 +83,7 @@ Plug 'pearofducks/ansible-vim'
 "
 " Plug 'SirVer/ultisnips'                                           " Snippet engine
 "
+Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'honza/vim-snippets'                                         " Snippets
@@ -224,4 +227,6 @@ nmap ga <Plug>(EasyAlign)
 
 
 
-
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
