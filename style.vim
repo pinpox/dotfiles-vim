@@ -18,10 +18,8 @@ syntax on
 set background=dark
 
 " set ansible-generated colorscheme
-"
 let base16colorspace=256
 colorscheme ansible-theme
-" colorscheme aurora
 
 " Italic comments
 highlight Comment cterm=italic gui=italic

@@ -146,6 +146,10 @@ Plug 'tpope/vim-vinegar'                                          " Enhance netr
 Plug 'triglav/vim-visual-increment'                               " Visually increment numbers
 Plug 'rhysd/vim-grammarous'                                       " Grammar checking with languagetool
 
+" Plug 'arzg/vim-colors-xcode'
+
+Plug 'lifepillar/vim-colortemplate'
+
 call plug#end()
 
 " Plugin options
@@ -230,3 +234,7 @@ nmap ga <Plug>(EasyAlign)
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+
+
+" disable concellevel for markdown
+let g:vim_markdown_conceal = 0
