@@ -106,6 +106,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 " Git
 Plug 'airblade/vim-gitgutter'                                     " Shows a git diff in the gutter
 Plug 'rhysd/committia.vim'                                        " Better commit message editor
+Plug 'romainl/vim-sweet16'
 
 " Markup
 Plug 'godlygeek/tabular'                                          " The tabular plugin must come before vim-markdown
@@ -118,7 +119,7 @@ Plug 'ludovicchabant/vim-gutentags'                               " Autognerate 
 " Plug 'majutsushi/tagbar'                                          " Show Tagbar
 " Plug 'lvht/tagbar-markdown'                                       " Tagbar support for markdown files
 "
-" Tagbar replacement?
+" Tagbar replacement
 Plug 'liuchengxu/vista.vim'
 
 " Vim text-objects
