@@ -63,6 +63,9 @@ Plug 'kana/vim-textobj-user' " Dependency for vim-textobj-between
 Plug 'thinca/vim-textobj-between'     "Text objects for a range between a character
 Plug 'fvictorio/vim-textobj-backticks' "Text object between backticks
 
+
+
+Plug 'hashivim/vim-terraform'
 " Completion and snippets
 " "TODO
 " Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
@@ -239,3 +242,9 @@ let g:go_def_mapping_enabled = 0
 
 " disable concellevel for markdown
 let g:vim_markdown_conceal = 0
+
+
+" Terraform options
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
