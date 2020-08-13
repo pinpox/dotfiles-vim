@@ -1,5 +1,6 @@
 filetype plugin indent on
 set hidden                     " Buffer becomes hidden when it is abandoned but is not unloaded
+set title                      " Show title in terminal window
 set autochdir                  " Automatically change the working dir to the one of the file
 set autoindent                 " always set autoindenting on
 set backspace=indent,eol,start " allow backspacing over everything in insert mode

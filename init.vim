@@ -42,7 +42,7 @@ let g:which_key_map.g = {
 
 let g:which_key_map.l = {
 			\ 'name' : '+LSP',
-			\ 'f' : [':call CocAction("format")' , 'Autoformat'],
+			\ 'f' : ['<Plug>(coc-format-selected)' , 'Autoformat'],
 			\ 'R' : ['<Plug>(coc-references)'    , 'References'],
 			\ 'r' : ['<Plug>(coc-rename)'        , 'Rename'],
 			\ 'a' : ['<Plug>(coc-codeaction)'    , 'Code action'],
