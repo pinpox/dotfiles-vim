@@ -38,4 +38,6 @@ set noshowmode " dont show the current mode below the bar
 " Color max line length of 100
 let &colorcolumn=join(range(101,999),",")
 
+
+let g:moonflyWithCocIndicator = 1
 set cmdheight=1

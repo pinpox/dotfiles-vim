@@ -49,13 +49,14 @@ let g:which_key_map.l = {
 			\ 'F' : ['<Plug>(coc-fix-current)'   , 'Fix automatically'],
 			\ 'c' : {
 				\ 'name': '+CocList',
-				\ 'd' : [':<C-u> CocList dignostics' , 'Diagnostics'],
-				\ 'e' : [':<C-u> CocList extensions' , 'Extensions'],
-				\ 'c' : [':<C-u> CocList commands'   , 'Commands'],
-				\ 'o' : [':<C-u> CocList outline'    , 'Outline'],
-				\ 's' : [':<C-u> CocList -I symbols' , 'Symbols'],
+				\ 'd' : [':CocList dignostics' , 'Diagnostics'],
+				\ 'e' : [':CocList extensions' , 'Extensions'],
+				\ 'c' : [':CocList commands'   , 'Commands'],
+				\ 'o' : [':CocList outline'    , 'Outline'],
+				\ 's' : [':CocList -I symbols' , 'Symbols'],
 				\ },
 			\ }
+
 
 " let g:which_key_map['w'] = {
 "       \ 'name' : '+windows' ,
