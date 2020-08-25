@@ -67,6 +67,7 @@ Plug 'fvictorio/vim-textobj-backticks' "Text object between backticks
 
 
 Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-snippets'
 " Completion and snippets
 " "TODO
 " Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}       " Autocompletion
