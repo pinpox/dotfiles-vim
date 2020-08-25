@@ -39,5 +39,5 @@ set noshowmode " dont show the current mode below the bar
 let &colorcolumn=join(range(101,999),",")
 
 
-let g:moonflyWithCocIndicator = 1
+" let g:moonflyWithCocIndicator = 1
 set cmdheight=1

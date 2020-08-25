@@ -13,6 +13,7 @@
 		}
 	},
 	"suggest.snippetIndicator": " ► ",
+	"diagnostic.checkCurrentLine": true,
 	"suggest.triggerAfterInsertEnter": true,
 	"suggest.noselect": false,
 	"suggest.minTriggerInputLength": 1,

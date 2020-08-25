@@ -43,18 +43,15 @@ let g:which_key_map.g = {
 let g:which_key_map.l = {
 			\ 'name' : '+LSP',
 			\ 'f' : ['<Plug>(coc-format-selected)' , 'Autoformat'],
-			\ 'R' : ['<Plug>(coc-references)'    , 'References'],
-			\ 'r' : ['<Plug>(coc-rename)'        , 'Rename'],
-			\ 'a' : ['<Plug>(coc-codeaction)'    , 'Code action'],
-			\ 'F' : ['<Plug>(coc-fix-current)'   , 'Fix automatically'],
-			\ 'c' : {
-				\ 'name': '+CocList',
-				\ 'd' : [':CocList dignostics' , 'Diagnostics'],
-				\ 'e' : [':CocList extensions' , 'Extensions'],
-				\ 'c' : [':CocList commands'   , 'Commands'],
-				\ 'o' : [':CocList outline'    , 'Outline'],
-				\ 's' : [':CocList -I symbols' , 'Symbols'],
-				\ },
+			\ 'R' : ['<Plug>(coc-references)'      , 'References'],
+			\ 'r' : ['<Plug>(coc-rename)'          , 'Rename'],
+			\ 'a' : ['<Plug>(coc-codeaction)'      , 'Code action'],
+			\ 'F' : ['<Plug>(coc-fix-current)'     , 'Fix automatically'],
+			\ 'o' : [':CocList outline'            , 'Code outline'],
+			\ 's' : [':CocList -I symbols'         , 'Symbols'],
+			\ 'd' : [':CocList dignostics'         , 'Diagnostics'],
+			\ 'e' : [':CocList extensions'         , 'Extensions'],
+			\ 'c' : [':CocList commands'           , 'Commands'],
 			\ }
 
 
