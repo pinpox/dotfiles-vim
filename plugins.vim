@@ -31,6 +31,9 @@ Plug 'nicwest/vim-camelsnek'
 
 Plug 'ryanoasis/vim-devicons'
 
+
+Plug 'rrethy/vim-illuminate'
+
 " Colorschemes
 " Plug 'jeffkreeftmeijer/vim-dim'
 " Plug 'noahfrederick/vim-noctu'
