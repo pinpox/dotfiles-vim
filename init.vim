@@ -1,23 +1,23 @@
 " PLUGINS:
-source ~/.vim/plugins.vim
+runtime plugins.vim
 
 " GENERAL OPTIONS:
-source ~/.vim/general.vim
+runtime general.vim
 
 " FILE BROWSING:
-source ~/.vim/netrw.vim
+runtime netrw.vim
 
 " KEY MAPPINGS:
-source ~/.vim/mappings.vim
+runtime mappings.vim
 
 " APPEARANCE:
-source ~/.vim/style.vim
+runtime style.vim
 
 " LANGUAGESERVER:
-source ~/.vim/lsp.vim
+runtime lsp.vim
 
 " COC:
-source ~/.vim/coc_settings.vim
+runtime coc_settings.vim
 
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
@@ -31,6 +31,9 @@ nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 let g:which_key_map =  {}
+
+" Set timeout, e.g. used in whichkey
+set timeoutlen=500
 
 let g:which_key_map.g = {
 			\ 'name' : '+GOTO',
@@ -52,6 +55,7 @@ let g:which_key_map.l = {
 			\ 'd' : [':CocList dignostics'         , 'Diagnostics'],
 			\ 'e' : [':CocList extensions'         , 'Extensions'],
 			\ 'c' : [':CocList commands'           , 'Commands'],
+			\ 'b' : ['<Plug>(coc-bookmark-toggle)' , 'Toggle bookmark'],
 			\ }
 
 
@@ -76,3 +80,17 @@ let g:which_key_map.l = {
 "       \ '?' : ['Windows'    , 'fzf-window']            ,
 "       \ }
 "
+set inccommand=nosplit
+
+
+augroup your_config_scrollbar_nvim
+    autocmd!
+    autocmd BufEnter    * silent! lua require('scrollbar').show()
+    autocmd BufLeave    * silent! lua require('scrollbar').clear()
+
+    autocmd CursorMoved * silent! lua require('scrollbar').show()
+    autocmd VimResized  * silent! lua require('scrollbar').show()
+
+    autocmd FocusGained * silent! lua require('scrollbar').show()
+    autocmd FocusLost   * silent! lua require('scrollbar').clear()
+augroup end

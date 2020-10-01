@@ -48,6 +48,7 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Vista finder<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap ' :CocList marks<CR>
 
 " Terminal
 

@@ -16,12 +16,15 @@ Plug 'rafalbromirski/vim-aurora'
 " Plug 'jiangmiao/auto-pairs'                                     " Auto-close brackets
 " Plug 'rakr/vim-one'                         " Colorscheme
 " Plug 'reewr/vim-monokai-phoenix'                                " Colortheme
+Plug 'LnL7/vim-nix'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'tclem/vim-arduino'
 " Plug 'vim-latex/vim-latex'
 " Plug 'lukaszkorecki/workflowish'
 " Plug 'Stautob/vim-fish'                                         " Fish shell syntac
 Plug 'liuchengxu/vim-which-key'
+
+Plug 'kovetskiy/sxhkd-vim'
 
 " Latex
 Plug 'lervag/vimtex', {'for': 'tex'}
@@ -45,10 +48,12 @@ Plug 'chriskempson/base16-vim'                                    " Base16 color
 Plug 'rakr/vim-one'
 
 " Other appeareance
-" Plug 'bluz71/vim-moonfly-statusline'
-" Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
+Plug 'bluz71/vim-moonfly-statusline'
+Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
+" Plug 'bling/vim-bufferline'
+
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }       " Colorize color definitions
 Plug 'timakro/vim-searchant'                                    " Better highlighting of search
 
@@ -110,6 +115,8 @@ Plug 'prabirshrestha/async.vim'
 
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+Plug 'Xuyuanp/scrollbar.nvim'
 
 " Git
 Plug 'airblade/vim-gitgutter'                                     " Shows a git diff in the gutter

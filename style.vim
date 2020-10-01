@@ -38,6 +38,22 @@ set noshowmode " dont show the current mode below the bar
 " Color max line length of 100
 let &colorcolumn=join(range(101,999),",")
 
+let g:buftabline_indicators=1
 
-" let g:moonflyWithCocIndicator = 1
+
+let g:moonflyWithCocIndicator = 1
 set cmdheight=1
+
+" set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"              | | | | |  |   |      |  |     |    |
+"              | | | | |  |   |      |  |     |    +-- current column
+"              | | | | |  |   |      |  |     +-- current line
+"              | | | | |  |   |      |  +-- current % into file
+"              | | | | |  |   |      +-- current syntax
+"              | | | | |  |   +-- current fileformat
+"              | | | | |  +-- number of lines
+"              | | | | +-- preview flag in square brackets
+"              | | | +-- help flag in square brackets
+"              | | +-- readonly flag in square brackets
+"              | +-- rodified flag in square brackets
+"              +-- full path to file in the buffer
