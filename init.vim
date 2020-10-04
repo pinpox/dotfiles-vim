@@ -1,3 +1,6 @@
+" put this line first in ~/.vimrc
+set nocompatible | filetype indent plugin on | syn on
+
 " PLUGINS:
 runtime plugins.vim
 
@@ -94,3 +97,35 @@ augroup your_config_scrollbar_nvim
     autocmd FocusGained * silent! lua require('scrollbar').show()
     autocmd FocusLost   * silent! lua require('scrollbar').clear()
 augroup end
+
+let g:nix_maintainer="pinpox"
+
+
+fun! SetupVAM()
+  let c = get(g:, 'vim_addon_manager', {})
+  let g:vim_addon_manager = c
+  let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
+
+  " Force your ~/.vim/after directory to be last in &rtp always:
+  " let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
+
+  " most used options you may want to use:
+  " let c.log_to_buf = 1
+  " let c.auto_install = 0
+  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
+  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
+    execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
+        \       shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+  endif
+
+  " This provides the VAMActivate command, you could be passing plugin names, too
+  call vam#ActivateAddons(["vim-addon-nix"], {})
+endfun
+call SetupVAM()
+
+" ACTIVATING PLUGINS
+
+" OPTION 2: use call vam#ActivateAddons
+" call vam#ActivateAddons(["vim-addon-nix"], {})
+" use <c-x><c-p> to complete plugin names
+

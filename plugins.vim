@@ -16,7 +16,8 @@ Plug 'rafalbromirski/vim-aurora'
 " Plug 'jiangmiao/auto-pairs'                                     " Auto-close brackets
 " Plug 'rakr/vim-one'                         " Colorscheme
 " Plug 'reewr/vim-monokai-phoenix'                                " Colortheme
-Plug 'LnL7/vim-nix'
+" Plug 'LnL7/vim-nix'
+" Plug 'MarcWeber/vim-addon-nix'
 " Plug 'edkolev/tmuxline.vim'
 " Plug 'tclem/vim-arduino'
 " Plug 'vim-latex/vim-latex'
