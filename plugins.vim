@@ -48,10 +48,10 @@ Plug 'chriskempson/base16-vim'                                    " Base16 color
 Plug 'rakr/vim-one'
 
 " Other appeareance
-Plug 'bluz71/vim-moonfly-statusline'
-Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
-" Plug 'vim-airline/vim-airline-themes'
-" Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
+" Plug 'bluz71/vim-moonfly-statusline'
+" Plug 'ap/vim-buftabline'                                        " Forget Vim tabs, now you can have buffer tabs
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'                                        " Lean & mean status/tabline
 " Plug 'bling/vim-bufferline'
 
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }       " Colorize color definitions
